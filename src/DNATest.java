@@ -45,6 +45,13 @@ public class DNATest {
     }
 
     @Test
+    @Timeout(value = 100, unit = TimeUnit.MILLISECONDS)
+    public void testTricky() {
+        setTestData(1);
+    }
+
+
+    @Test
     @Timeout(value = 20000, unit = TimeUnit.MILLISECONDS)
     public void testLargest() {
         int maxSize = 100000000;
